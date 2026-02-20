@@ -2,28 +2,33 @@
 
 ### Как запустить
 
-1) pапускаем:
+1) переходим в директорию sharding-repl-cache
 ```shell
-docker compose up -d -f ./sharding-repl-cache/compose.yaml
+cd sharding-repl-cache
 ```
 
-2) инициализируем кластер mongo
-
+2) pапускаем:
 ```shell
-./sharding-repl-cache/scripts/mongo-set-init.sh
+docker compose up -d
 ```
 
-3) заполняем mongodb данными
+3) инициализируем кластер mongo
 
 ```shell
-./sharding-repl-cache/scripts/mongo-init.sh
+./scripts/mongo-set-init.sh
+```
+
+4) заполняем mongodb данными
+
+```shell
+./scripts/mongo-init.sh
 ```
 
 
 ### Как узнать число записей на шардах:
 
 ```shell
-./sharding-repl-cache/scripts/mongo-count.sh
+./scripts/mongo-count.sh
 ```
 
 ### draw.io с описанием:
